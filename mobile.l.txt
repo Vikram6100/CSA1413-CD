@@ -1,0 +1,16 @@
+%{
+#include<stdio.h>
+%}
+%%
+[6-9][0-9]{9}{printf("it is a mobile number");}
++ printf("Not a mobile number");
+%%
+int main()
+{
+printf("enter the input string: ");
+yylex();
+}
+int yywrap()
+{
+return 1;
+}
